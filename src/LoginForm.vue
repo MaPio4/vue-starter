@@ -9,13 +9,13 @@
 
 <script>
 export default {
-data() {
+  data() {
     return {
-        email: '',
-        errorMsg: '',
+      email: '',
+      errorMsg: '',
     }
-},
-methods: {
+  },
+  methods: {
     enter() {
       if(this.validateMail(this.email))
         this.$emit('login', this.email);
