@@ -2,7 +2,7 @@
   <div>
       <label>Zaloguj się e-mailem</label>
       <input type="email" v-model="email">
-      <button @click="enter()">Zaloguj się</button>
+      <button @click="enter()"> {{ buttonLabel }} </button>
       <div>{{ errorMsg }}</div>
   </div>
 </template>
@@ -38,6 +38,9 @@ export default {
         return true;
       }
     },
+  },
+  props: {
+    buttonLabel: String,
   }
 }
 </script>

@@ -4,7 +4,7 @@
     <h1>Witaj w systemie do zapisu na zajęcia!</h1>
 
     <div v-if="email.length <= 0">
-      <LoginForm @login="(username) => logMeIn(username)"></LoginForm>
+      <LoginForm @login="(username) => logMeIn(username)" buttonLabel="Zaloguj"></LoginForm>
     </div>
 
     <div v-else>
