@@ -8,8 +8,7 @@
     </div>
 
     <div v-else>
-      Zalogowano jako {{ email }} <br>
-      <button @click="logMeOut()">Wyloguj</button>
+      <UserPanel @logout="logMeOut()" :email="email"></UserPanel>
     </div>
 
   </div>
@@ -18,6 +17,7 @@
 <script>
 import "milligram";
 import LoginForm from "./LoginForm";
+import UserPanel from "./UserPanel";
 export default {
   data() {
     return {
@@ -35,7 +35,8 @@ export default {
   },
   components: {
     LoginForm,
-  },
+    UserPanel
+},
 }
 </script>
 
